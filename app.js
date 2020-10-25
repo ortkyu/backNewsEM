@@ -1,5 +1,4 @@
 const express = require('express')
-const config = require('config')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
@@ -13,7 +12,7 @@ app.use('/', require('./routes/articles.routes'))
 app.use('/more', require('./routes/articles.routes'))
 
 
- const PORT = config.get('port') || 5000
+ const PORT =  5000
 
  async  function  start () {
     try {
