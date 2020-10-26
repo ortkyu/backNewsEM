@@ -1,6 +1,5 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
 
 
 app = express()
@@ -14,9 +13,9 @@ app.use('/more', require('./routes/articles.routes'))
 
  const PORT =  5000
 
- async  function  start () {
+ async function start () {
     try {
-        await mongoose.connect('mongodb+srv://john:111111jo@cluster0.wdfrb.azure.mongodb.net/news?retryWrites=true&w=majority', {
+        await mongoose.connect('mongodb+srv://password@cluster0.wdfrb.azure.mongodb.net/...?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true

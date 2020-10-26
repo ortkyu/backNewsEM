@@ -1,17 +1,11 @@
 const {Router} = require('express')
 const Articles = require('../models/Article')
-const CommentArticle = require('../models/CommentArticle')
 const router = Router()
 const cors = require('cors')
 
 app.use(cors())
 
 
-/*router.post('/articles/:id/comment', async (req, res) => {
-
-})*/
-
-///articles.json?orderBy="$key"&limitToLast=3
 router.get('/', async(req,res) => {
     try {
         const articles = await Articles.find().
